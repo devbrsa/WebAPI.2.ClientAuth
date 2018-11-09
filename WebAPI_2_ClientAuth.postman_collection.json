@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "523bb1d0-4541-4be5-bb9e-b9a5e7635457",
+		"name": "WebAPI_2_ClientAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:2727/token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "secret",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "resources",
+							"value": "aa",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "racao",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "xTc6NIyRQW4QoOYX-9dF-ewsxwyDK6tFquFemPd0_v4CVEcBlb4tkuYtZWlLTm6g1czHxi5CB-Y8PPnkdKH-XxJeA2zbEvRvzYWV_m2O0XtYluMuZtaZHalGLhDArRCKTF1By_o_Nx-PbT8sq-OxRtRInqMAs5M2hPtuET7CBq4wQ-V6KTUeuFTjJ4HrgP0OP_UaXI9JvmdR5HyEMeLXcgNYu92ZpS7xUwAFq6JTvSRlMUlcmkBV6YAmveyYfEVs",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2727/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2727",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2727/api/test",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3bjNEubZzejf8QyBbd1-lTKBEz0cMXn2-usa-4RyWrB_EzQ4Uy14kJjyqTHZ8VE-xvW28L3eG7kMFTYImc6BE8X1sMZeD85zfAc3FlqvihoYpj_xf43nmURyr6Qw_AP-ohkgwW2tbbAEEcKmRqmdUoocrIufsX6R4PhRhNQI51AAembA5VVRtyHpO8fJxVY5lJ9REUeU-ceBTg6lN_VKEyj_6pZSFErKTK9m-jAvcenBM1umIxV1ts_286J2Dw-_",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:2727/api/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2727",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
